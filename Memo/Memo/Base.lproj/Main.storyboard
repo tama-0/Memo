@@ -606,22 +606,8 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Memo" customModuleProvider="target">
-                    <connections>
-                        <outlet property="menu" destination="Niv-ac-gdg" id="Mob-06-RtU"/>
-                    </connections>
-                </customObject>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Memo" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-                <menu id="Niv-ac-gdg">
-                    <items>
-                        <menuItem title="boot up" id="U0g-vm-VTi">
-                            <modifierMask key="keyEquivalentModifierMask"/>
-                            <connections>
-                                <segue destination="B8D-0N-5wS" kind="show" id="Ght-x8-rDt"/>
-                            </connections>
-                        </menuItem>
-                    </items>
-                </menu>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -631,7 +617,7 @@
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" hasShadow="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titleVisibility="hidden" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="392" height="173"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -688,18 +674,22 @@
                                     <action selector="button_click:" target="XfG-lQ-9wD" id="XQd-Se-PSC"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGS-Od-8hZ">
-                                <rect key="frame" x="229" y="-7" width="61" height="32"/>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGS-Od-8hZ">
+                                <rect key="frame" x="-9" y="-7" width="68" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="COPY" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JLh-tZ-uRH">
+                                <buttonCell key="cell" type="push" title="EXIT" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JLh-tZ-uRH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="exit_button_click:" target="XfG-lQ-9wD" id="YgZ-d9-v8c"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="Delete_Button" destination="9uC-U0-NbL" id="LHv-7B-6oJ"/>
+                        <outlet property="Exit_Button" destination="DGS-Od-8hZ" id="IIt-Qt-KWV"/>
                         <outlet property="Textbox" destination="Vw7-cH-z1g" id="ShP-Aw-nk2"/>
                     </connections>
                 </viewController>

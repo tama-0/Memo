@@ -1,3 +1,4 @@
+
 //
 //  ViewController.swift
 //  Memo
@@ -10,7 +11,8 @@ import Cocoa
 
 class ViewController: NSViewController {
     @IBOutlet weak var Delete_Button: NSButton!
-
+    @IBOutlet weak var Exit_Button: NSButton!
+    
     @IBOutlet var Textbox: NSTextView!
     
     override func viewDidLoad() {
@@ -27,6 +29,9 @@ class ViewController: NSViewController {
 
     @IBAction func button_click(_ sender: Any) {
         Textbox.string="";
+    }
+    @IBAction func exit_button_click(_ sender: Any) {
+        exit(0);
     }
     
 }
